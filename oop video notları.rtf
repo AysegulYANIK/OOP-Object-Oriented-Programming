@@ -1,0 +1,148 @@
+{\rtf1\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset162 Calibri;}{\f2\fnil\fcharset238 Calibri;}}
+{\colortbl ;\red0\green0\blue255;\red79\green129\blue189;\red0\green77\blue187;\red247\green150\blue70;\red75\green172\blue198;\red155\green187\blue89;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1 {\f0\fs22\lang31{\field{\*\fldinst{HYPERLINK https://www.youtube.com/watch?v=7Dai8SJgLkM }}{\fldrslt{https://www.youtube.com/watch?v=7Dai8SJgLkM\ul0\cf0}}}}\f0\fs22\par
+\par
+Coding Tech\f1\lang1055  - An Introduction to Object Oriented Programming\par
+Obje Nedir?\par
+primitive data types : byte, int, float, boolean, double, float, char\par
+\par
+Neden primitive data types yeterli gelmedi?\par
+\f0\lang1033\'f6\f1\lang1055 rnek : satran\f0\lang1033\'e7\f1\lang1055 ta at tan\f2\u305?\f1 mlanmas\f2\u305?\f1  : position, captured (bool), color \par
+each piece keep different data\par
+Benzer \f2\'ba\f1 ekilde davranan ama farkl\f2\u305?\f1  de\f2\u287?\f1 erleri olan veya farkl\f2\u305?\f1  i\f2\'ba\f1 lemlere maruz kalacak olan par\f0\lang1033\'e7\f1\lang1055 alar i\f0\lang1033\'e7\f1\lang1055 in STRUCTURE ihtiyac\f2\u305?\f1  do\f2\u287?\f1 mu\f2\'ba\f1 tur.\par
+\par
+The structure, array 'e benzer\par
+bir\f0\lang1033\'e7\f1\lang1055 ok datay\f2\u305?\f1  bir arada tutarlar. Array ile structure fark\f2\u305?\f1 : dizide tutulan her veri ayn\f2\u305?\f1  tipte, structureda veri tipi farkl\f2\u305?\f1  olabilir.\par
+Structure yap\f2\u305?\f1 s\f2\u305?\f1 nda bir arada tutulabilecek veri t\f0\lang1033\'fc\f1\lang1055 rleri :  int, string, inti double\par
+bir structure birden \f0\lang1033\'e7\f1\lang1055 ok structure '\f2\u305?\f1  da i\f0\lang1033\'e7\f1\lang1055 inde tutabilir.\par
+\par
+struct Knight\par
+position, color, captured\par
+\par
+struct knights \par
+knight1 \par
+knight2\par
+knight3\par
+knight4\par
+\par
+struct whiteknights\par
+knight1 \par
+knight2\par
+\par
+struct blackknights\par
+knight3\par
+knight4\par
+--\par
+structure nas\f2\u305?\f1 l programlan\f2\u305?\f1 r?\par
+Declaration 1\par
+\cf2 struct struct_name \{\cf0\par
+\cf2    DataType member1_name;\par
+   DataType member2_name;\par
+   DataType member3_name;\par
+   \'85\par
+\};\par
+\cf0 Declaration 2\par
+\cf2 struct  struct_name  var_name;\cf0\par
+Access Structure\par
+\cf2 var_name.member1_name;\par
+var_name.member2_name;\par
+\par
+\cf0 Assign values to structure\par
+1) Using Dot(.) operator\par
+\cf2 var_name.memeber_name = value;\cf0\par
+\par
+2) All members assigned in one statement\par
+\cf2 struct struct_name var_name = \par
+\{value for memeber1, value for memeber2 \'85so on for all the members\}\par
+\cf0\par
+Nested Structure\par
+\cf3 Structure 1: stu_address\cf2\par
+struct stu_address\par
+\{\par
+     int street;\par
+     char *state;\par
+     char *city;\par
+     char *country;\par
+\}\par
+\cf3 Structure 2: stu_data\cf2\par
+struct stu_data\par
+\{\par
+    int stu_id;\par
+    int stu_age;\par
+    char *stu_name;\par
+    struct stu_address stuAddress;\par
+\}\par
+\cf0 Assign Nested Structure\par
+\cf2 struct  stu_data  mydata;\par
+mydata.stu_id = 1001;\par
+mydata.stu_age = 30;\par
+mydata.stuAddress.state = "UP"; //Nested struct assignment\par
+\cf0 Access Nested Structure\par
+\cf2 printf("%s",  mydata.stuAddress.city);\par
+\par
+\cf0 Structure yap\f2\u305?\f1 s\f2\u305?\f1 n\f2\u305?\f1 n sorunu nedir  ? \par
+i\f0\lang1033\'e7\f1\lang1055 lerinde fonksiyon bar\f2\u305?\f1 nd\f2\u305?\f1 ramazlar. Sadece referans tutabilirler.\par
+Satran\f0\lang1033\'e7\f1\lang1055  \f0\lang1033\'f6\f1\lang1055 rne\f2\u287?\f1 i i\f0\lang1033\'e7\f1\lang1055 in ta\f2\'ba\f1 a \f0\lang1033\'f6\f1\lang1055 zg\f0\lang1033\'fc\f1\lang1055  specific fonksiyon tan\f2\u305?\f1 mlayam\f2\u305?\f1 yorsun. Hareketi gibi.\par
+\par
+1 aral\f2\u305?\f1 k - 31 aral\f2\u305?\f1 k ikiye b\f0\lang1033\'f6\f1\lang1055 lmeden \par
+\par
+objects are instances of a class\par
+classes are templates for objects\par
+\par
+class knight\par
+move() : her par\f0\lang1033\'e7\f1\lang1055 a farkl\f2\u305?\f1  \f2\'ba\f1 ekillerde hareket edebilsin\par
+position\par
+color\par
+initialize etmeden, attribute ler olu\f2\'ba\f1 turulur, her bir Knight i\f0\lang1033\'e7\f1\lang1055 in farkl\f2\u305?\f1  de\f2\u287?\f1 erlerden birer farkl\f2\u305?\f1  instance olu\f2\'ba\f1 turulur.\par
+\par
+ilgili veri ve fonksiyonlar\f2\u305?\f1  bir arada programlamada kullan\f2\u305?\f1 l\f2\u305?\f1 r.\par
+\par
+4 ana konsepti var\par
+\cf4 1.Encapsulation\cf0\par
+methodlar\f2\u305?\f1 yla birlikte verinin sadece kendi s\f2\u305?\f1 n\f2\u305?\f1 f\f2\u305?\f1  i\f0\lang1033\'e7\f1\lang1055 inde i\f2\'ba\f1 lenmesine izin veren yap\f2\u305?\par
+\f1 veriyi kendi s\f2\u305?\f1 n\f2\u305?\f1 f\f2\u305?\f1  i\f0\lang1033\'e7\f1\lang1055 inde saklamak ve d\f2\u305?\'ba\f1 ar\f2\u305?\f1 dan etkile\f2\'ba\f1 ime kapal\f2\u305?\f1  olmas\f2\u305?\f1 n\f2\u305?\f1  sa\f2\u287?\f1 lamak\par
+Bu farkl\f2\u305?\f1  s\f2\u305?\f1 n\f2\u305?\f1 flara mensup objeler aras\f2\u305?\f1  etkile\f2\'ba\f1 im hi\f0\lang1033\'e7\f1\lang1055  yoktur demek de\f2\u287?\f1 il, attribute 'ler etkile\f2\'ba\f1 ime methodlar \f0\lang1033\'fc\f1\lang1055 zerinden ge\f0\lang1033\'e7\f1\lang1055 er.\par
+GETTING / SETTING methods\par
+piece.getColor() gibi\par
+Class Player1 maxhealt , currentHealth  >> Player.levelUp (setting method)\par
+\cf5 def setCurrentHealth(newHealth) : \par
+\tab player.currentHealth = newHealth\par
+\tab if player.currentHealth > player.maxHealth : \par
+\tab\tab player.currentHealth = player.maxHealth\par
+\cf0 Baz\f2\u305?\f1  atrtibute 'lerin READ ONLY olarak tan\f2\u305?\f1 mlanmas\f2\u305?\par
+\f0\lang1033\'f6\f1\lang1055 rne\f2\u287?\f1 in chess \f0\lang1033\'f6\f1\lang1055 rne\f2\u287?\f1 inde;\par
+piece.rank = A3 ; demek do\f2\u287?\f1 ru bir yakla\f2\'ba\u305?\f1 m de\f2\u287?\f1 il \f0\lang1033\'f6\f1\lang1055 nce bir validation kontrol\f0\lang1033\'fc\f1\lang1055  yap\f2\u305?\f1 lacak.\par
+sonu\f0\lang1033\'e7\f1\lang1055  olarak external s\f2\u305?\f1 n\f2\u305?\f1 flar\f2\u305?\f1 n do\f2\u287?\f1 rudan nesnenin attribute 'lerini de\f2\u287?\f1 i\f2\'ba\f1 tirmesi do\f2\u287?\f1 ru de\f2\u287?\f1 ildir.\par
+\cf4 2.Abstraction\cf0\par
+Sadece temel detaylar\f2\u305?\f1 n verilmesi, geri kalan her \f2\'ba\f1 eyin sakl\f2\u305?\f1  tutulmas\f2\u305?\f1\par
+Abstraction - Car Example : \par
+Direksiyon hareketleri, gaz ve fren pedallar\f2\u305?\f1 yla olan etkile\f2\'ba\f1 imler ve benzin miktar\f2\u305?\f1\par
+s\f0\lang1033\'fc\f1\lang1055 r\f0\lang1033\'fc\f1\lang1055 c\f0\lang1033\'fc\f1\lang1055 n\f0\lang1033\'fc\f1\lang1055 n bilmesi gereken detaylar\par
+outcome istendi\f2\u287?\f1 i gibiyse i\f0\lang1033\'e7\f1\lang1055 inde ne oldu\f2\u287?\f1 u \f0\lang1033\'e7\f1\lang1055 ok da dert de\f2\u287?\f1 il\par
+OOP 'nin temelde i\f2\'ba\f1 leme mant\f2\u305?\u287?\u305?\f1  da budur : s\f2\u305?\f1 n\f2\u305?\f1 flar\f2\u305?\f1 n\f2\u305?\f1 n kullan\f2\u305?\f1 c\f2\u305?\f1 lar\f2\u305?\f1  s\f2\u305?\f1 n\f2\u305?\f1 flar\f2\u305?\f1 n i\f0\lang1033\'e7\f1\lang1055  detaylar\f2\u305?\f1  ile ilgilenmez sonu\f0\lang1033\'e7\f1\lang1055 lar\f2\u305?\f1 yla ilgilenir.\par
+Encapsulation ile abstraction \f0\lang1033\'e7\f1\lang1055 ok benzer iki konsept\par
+\f0\lang1033\'d6\f1\lang1055 zellikle artarak ilerleyen programlarda bu konsept \f0\lang1033\'e7\f1\lang1055 ok gerekli\par
+Birden \f0\lang1033\'e7\f1\lang1055 ok ki\f2\'ba\f1 inin \f0\lang1033\'e7\f1\lang1055 al\f2\u305?\'ba\f1 t\f2\u305?\u287?\u305?\f1  b\f0\lang1033\'fc\f1\lang1055 y\f0\lang1033\'fc\f1\lang1055 k programlarda da kullan\f2\u305?\f1 lmas\f2\u305?\f1  iyi\par
+Birlikte \f0\lang1033\'e7\f1\lang1055 al\f2\u305?\'ba\f1 t\f2\u305?\u287?\u305?\f1 n ki\f2\'ba\f1 i senin yazd\f2\u305?\u287?\u305?\f1 n kod par\f0\lang1033\'e7\f1\lang1055 as\f2\u305?\f1 n\f2\u305?\f1 n i\f2\'ba\f1 levsel detay\f2\u305?\f1 n\f2\u305?\f1  bilmek zorunda kalmadan do\f2\u287?\f1 rudan refere ederek senin fonksiyonlar\f2\u305?\f1 n\f2\u305?\f1  kullanabiliyor b\f0\lang1033\'f6\f1\lang1055 ylece. \par
+\ul 2.1 Interface ve Implementation\ulnone\par
+Interface, kod par\f0\lang1033\'e7\f1\lang1055 alar\f2\u305?\f1 n\f2\u305?\f1 n birbiri ile ileti\f2\'ba\f1 im kurabilmesi i\f0\lang1033\'e7\f1\lang1055 in bir yol \par
+Bu da t\f0\lang1033\'fc\f1\lang1055 m s\f2\u305?\f1 n\f2\u305?\f1 flar\f2\u305?\f1 n eri\f2\'ba\f1 ebildi\f2\u287?\f1 i methodlarla sa\f2\u287?\f1 lan\f2\u305?\f1 r.\par
+Bu metotlar\f2\u305?\f1 n implementation '\f2\u305?\f1  veya nas\f2\u305?\f1 l kodland\f2\u305?\u287?\u305?\f1  sakl\f2\u305?\f1  tutulmal\f2\u305?\f1\par
+gaza bas\f2\u305?\f1 nca araban\f2\u305?\f1 n ileri gitmesi beklenir bunu nas\f2\u305?\f1 l yapt\f2\u305?\u287?\u305?\f1 n\f2\u305?\f1 n payla\f2\'ba\u305?\f1 lmas\f2\u305?\f1  gerekmez\par
+satran\f0\lang1033\'e7\f1\lang1055 ta ta\f2\'ba\f1 lar aras\f2\u305?\f1  etkile\f2\'ba\f1 imler Interface ile sa\f2\u287?\f1 lanabilir. \par
+King ile knight aras\f2\u305?\f1 nda bir \f2\'ba\f1 ah \f0\lang1033\'e7\f1\lang1055 ekme durumu sorgulamas\f2\u305?\f1  yazacaksam, knigh hareketlerini programlarken King 'in getter method 'unu kullanmal\f2\u305?\f1 s\f2\u305?\f1 n ki at\f2\u305?\f1 n o hareketi \f2\'ba\f1 ah m\f2\u305?\f1  \f0\lang1033\'e7\f1\lang1055 ekiyor\par
+E\f2\u287?\f1 er \f0\lang1033\'f6\f1\lang1055 yleyse, knights methodlar\f2\u305?\f1 yla da king 2e \f2\'ba\f1 ah durumunu ortadan kald\f2\u305?\f1 racak hamleler d\f2\u305?\'ba\u305?\f1 nda hareket etme \f2\'ba\f1 ans\f2\u305?\f1  b\f2\u305?\f1 rak\f2\u305?\f1 lmaz\par
+S\f2\u305?\f1 n\f2\u305?\f1 flar \f0\lang1033\'e7\f1\lang1055 ok i\f0\lang1033\'e7\f1\lang1055 i\f0\lang1033\'e7\f1\lang1055 e ge\f0\lang1033\'e7\f1\lang1055 erse, ufak bir de\f2\u287?\f1 i\f2\'ba\f1 iklik di\f2\u287?\f1 er t\f0\lang1033\'fc\f1\lang1055 m s\f2\u305?\f1 n\f2\u305?\f1 flar\f2\u305?\f1  da mahvedebilir\par
+bir interface yaratmak etkile\f2\'ba\f1 en s\f2\u305?\f1 n\f2\u305?\f1 flarda her bir par\f0\lang1033\'e7\f1\lang1055 an\f2\u305?\f1 n ayr\f2\u305?\f1  ayr\f2\u305?\f1  bireysel olarak geli\f2\'ba\f1 tirilmesini sa\f2\u287?\f1 lar.\par
+----------------\par
+Detayl\f2\u305?\f1  Interface ve Implementation @abstraction\par
+\cf6 Like a class, an interface can have methods and variables, but the methods declared in an interface are by default abstract (only method signature, no body).  \cf0\par
+\cf3 Interfaces specify what a class must do and not how. It is the blueprint of the class.\par
+\cf0\par
+\par
+\par
+\par
+\f0\lang31\par
+}
+ 

@@ -1,0 +1,3 @@
+event-driving
+data-oriented
+object-oriented
